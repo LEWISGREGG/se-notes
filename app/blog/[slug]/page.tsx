@@ -31,7 +31,6 @@ export default async function BlogArticle({params}: {params: {slug:string}}) {
             <h1 className="mt-2 ">
             <span className="mt-2 border-red-700 mb-1 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">{data.title}</span>
             </h1>
-            <p className="line-clamp-3 text-sm mt-2 text-gray-700 font-bold dark:text-gray-300">{data.smallDescription}</p>
             <Image 
             src={urlFor(data.titleImage).url()}
             width={500}
