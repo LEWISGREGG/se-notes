@@ -39,7 +39,7 @@ export default function RootLayout({
   
 }>) {
   return (
-    <ClerkProvider>
+    
     <html lang="en">
       <body className={fondamento.className="mx-auto"}>
       <ThemeProvider
@@ -55,6 +55,6 @@ export default function RootLayout({
       </ThemeProvider>
       </body>
     </html>
-    </ClerkProvider>
+  
   );
 }
