@@ -29,7 +29,7 @@ function Navbar() {
         <Button
         className=" px-4 py-2 my-2 font-bold bg-gray-50 shadow-md rounded-full text-red-600 active:scale-90 
         transition duration-150 transform hover:shadow-xl hover:bg-gray-100 ">
-        <Link href={`/structure/blog`}>Studio Editor</Link>
+        <Link href={`https://structure-blog.sanity.studio/structure/blog`}>Studio Editor</Link>
         </Button>
         
     </div> 
