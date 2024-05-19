@@ -1,5 +1,5 @@
-
+structure_blog
 # Ignore everything (folders and files) on root only
 /*
 !sanity
-!structure-blog
+!structure_blog
