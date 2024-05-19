@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { ModeToggle } from './ModeToggle';
 import Image from 'next/image';
-import { SignInButton, SignedOut, UserButton } from "@clerk/nextjs";
+
 import { Button } from '@/components/ui/button';
 import NextNProgress from 'nextjs-progressbar';
 function Navbar() {
@@ -43,10 +43,6 @@ function Navbar() {
     </div>
     <div className="static"><ModeToggle/></div>
     
-    <UserButton afterSignOutUrl="/huilo" />
-    <SignedOut>
-      <SignInButton afterSignInUrl="/" mode="modal" />
-    </SignedOut>  
 
     
     </div>
