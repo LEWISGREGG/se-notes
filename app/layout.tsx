@@ -10,21 +10,11 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Loading from "./components/Loading";
 import ProgressBar from "@badrap/bar-of-progress";
 import Router from "next/navigation";
-
-
+import TopLeftImage from "@/components/ui/TopLeftImage";
 
 const fondamento = Fondamento({ subsets: ["latin"], 
 variable: '--font-fondamento', 
 weight: ['400'] });
-
-const progress = new ProgressBar({
-  size: 8,
-  color: "#ea99b1",
-  className: "z-50",
-  delay: 300,
-});
-
-
 
 
 export const metadata: Metadata = {
@@ -52,6 +42,7 @@ export default function RootLayout({
       <Banner/>
       {children}
       <Bulb/>
+      <TopLeftImage/>
       </ThemeProvider>
       </body>
     </html>
