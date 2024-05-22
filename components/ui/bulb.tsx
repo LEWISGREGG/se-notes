@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 function Bulb() {
   return (
-    <div className="absolute -left-12 -top-8 rotate-12 mix-blend-color-dodge 
-    animate-pulse duration-300 z-10 w-[200px] xl:w-[260px] ">
+    <div className="absolute -left-8 xl:-left-12 -top-8 rotate-12  
+    animate-pulse duration-700 z-10 w-[100px] xl:w-[160px] opacity-5 ">
         <Image
         src='/bulb.png'
         width= {200}
