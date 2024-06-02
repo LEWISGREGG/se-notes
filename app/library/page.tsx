@@ -47,7 +47,8 @@ return (
     initial="hidden"
     animate="show" 
     exit="hidden"  
-    className="text-gray-700 text-center text-[32px] lg:py-[22px] font-extrabold dark:text-gray-50 animate-pulse">
+    className="text-gray-700 text-center text-[32px] lg:py-[22px] font-extrabold dark:text-gray-50 animate-pulse"
+    id='hero'>
     eTextbook Library
     </motion.h1>
     <motion.p 
@@ -1508,8 +1509,21 @@ return (
             </Button>
         </div>
     </motion.div>
-    <section className="flex justify-center items-center max-w-7xl rounded-lg text-black-700 mt-10">
-        <div className="font-bold">&copy; {currentYear} Structural Eng ALL RIGHTS RESERVED</div>
+
+        <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer mt-2">
+        <div className="flex items-center justify-center">
+        <Image
+        className="h-10 w-10 rounded-full filter hover:scale-110 cursor-pointer transition-transform duration-500 ease-in-out"
+        width={10}
+        height={10}
+        src="https://www.svgrepo.com/show/272155/bridges.svg" alt="page"/>
+        </div>
+        </footer>
+        </Link>
+
+    <section className="flex justify-center items-center max-w-7xl rounded-lg text-black-700 mt-8">
+        <div className="font-bold">&copy; {currentYear} Structural Eng LLC. ALL RIGHTS RESERVED</div>
     </section>
 </div>
   )
