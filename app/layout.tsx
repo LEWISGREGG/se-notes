@@ -31,7 +31,8 @@ export default function RootLayout({
   return (
     
     <html lang="en">
-      <body className={fondamento.className="mx-auto"}>
+      <body className={fondamento.className}>
+      <div className="scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-slate-200">
       <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -44,6 +45,7 @@ export default function RootLayout({
       <Bulb/>
       <TopLeftImage/>
       </ThemeProvider>
+      </div>
       </body>
     </html>
   
