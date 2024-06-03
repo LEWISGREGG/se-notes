@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear();
 function Contact() {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const sendEmail = (params) => {
+  const sendEmail = (params:any) => {
 
     const toastId = toast.loading("Sending your message, please wait....")
 
@@ -37,7 +37,7 @@ function Contact() {
         
 
 
-        const onSubmit = (data) => {
+        const onSubmit = (data:any) => {
           const templateParams = {
             to_name: "Serhio",
             from_name: data.name,
@@ -61,7 +61,7 @@ engineering consulting services. <br /> We are happy to answer any questions you
 Please do not hesitate to contact us by using the contact form on this page.</p>
 </div>
 <form onSubmit={handleSubmit(onSubmit)} className='max-w-md w-full flex flex-col items-center justify-center space-y-4'>
-      <input 
+      <input placeholder="Name"
             type="text" {...register("name", {
             required: "This field is required!",
             minLength: {
@@ -83,8 +83,7 @@ Please do not hesitate to contact us by using the contact form on this page.</p>
 
 
       
-      <textarea 
-      {...register}  
+      <textarea placeholder="Message"
       {...register("message", {
             required: "This field is required!",
             maxLength: {
