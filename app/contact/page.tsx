@@ -22,15 +22,30 @@ function Contact() {
 
     const toastId = toast.loading("Sending your message, please wait....")
 
-    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID
-    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID
-
-    emailjs.send(serviceId, templateId, params,
+    emailjs
+    .send(
+      'service_0g8hdxo', 
+      'template_vvmry63', 
+      params,
       {
         publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
         limitRate: {
           throttle: 5000, 
                   },
+            }
+          )
+          .then (
+            () => {
+              toast.success("Success!", {
+                id: toastId,
+                duration: 5000,
+              });
+            },
+            (error) => {
+              toast.error("Failed!", {
+                id: toastId,
+                duration: 5000,
+              });
             }
           )
         }
@@ -61,7 +76,8 @@ engineering consulting services. <br /> We are happy to answer any questions you
 Please do not hesitate to contact us by using the contact form on this page.</p>
 </div>
 <form onSubmit={handleSubmit(onSubmit)} className='max-w-md w-full flex flex-col items-center justify-center space-y-4'>
-      <input placeholder="Name"
+      <input 
+            placeholder="Name"
             type="text" {...register("name", {
             required: "This field is required!",
             minLength: {
@@ -75,7 +91,8 @@ Please do not hesitate to contact us by using the contact form on this page.</p>
       }
 
 
-      <input type="email" placeholder="Email" {...register("email", { required: "This field is required!" })} className='w-full border border-red-600 p-2 rounded-md shadow-lg text-foreground 
+      <input type="email" placeholder="Email" {...register("email", { required: "This field is required!" })} 
+      className='w-full border border-red-600 p-2 rounded-md shadow-lg text-foreground 
       focus:outline-none focus:ring-2 focus:ring-red-500/50' />
       {
       errors.email && <span className='inline-block self-start text-red-500'>{errors.email.message}</span>
