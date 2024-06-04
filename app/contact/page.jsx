@@ -75,7 +75,7 @@ return (
 engineering consulting services. <br /> We are happy to answer any questions you may have about our services. <br />
 Please do not hesitate to contact us by using the contact form on this page.</p>
 </div>
-<form onSubmit={handleSubmit(onSubmit)} className='max-w-md w-full flex flex-col items-center justify-center space-y-4'>
+<form onSubmit={handleSubmit(onSubmit)} className='max-w-md w-2xl flex flex-col items-center justify-center space-y-4'>
       <input 
             placeholder="Name"
             type="text" {...register("name", {
